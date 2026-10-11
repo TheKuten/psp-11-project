@@ -26,7 +26,7 @@ class Human:
 
         return pills
 
-    def getPillInfo(self, choice):
+    def getPillInfo(self, choice: str):
         """Get a pill's information as a dictionary. [Despacitone/Gigachadus/Aurafarmine]"""
 
         # Error handler if no choice is provided
@@ -50,7 +50,7 @@ class Human:
                 print("Error: No pill found!")
                 return None
 
-    def eatPill(self, choice):
+    def eatPill(self, choice: str):
         """Purchase a certain pill and eat it, gaining its nutrition. [Despacitone/Gigachadus/Aurafarmine]"""
 
         # Error handler if no choice is provided
