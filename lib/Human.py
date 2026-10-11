@@ -58,15 +58,21 @@ class Human:
             print("Error: Please name a pill to eat.")
             return None
 
+        # Retrieve pill information
         toEat = self.getPillInfo(choice)
+
         if toEat != None:
+            # Check if the human has enough cash to afford the pill
             if self.cash < toEat["cost"]:
                 return print("You don't have enough money!")
-            
+
+            # Add the nutrition provided by the pill and deduct the cash
             self.protein += toEat["protein"]
             self.vitamins += toEat["vitamins"]
             self.minerals += toEat["minerals"]
             self.cash -= toEat["cost"]
+
+            # Prevent nutrition percentages from going past 100%
 
             if self.protein > 100:
                 self.protein = 100
@@ -78,6 +84,9 @@ class Human:
                 self.minerals = 100
 
             return "Eaten " + toEat["name"] + "!"
+        else:
+            print("Error: No pill is eaten.")
+            return None
 
     def getBestPill(self):
         """Automatically determine the best pill to eat at the moment based on current health status."""
@@ -108,7 +117,6 @@ class Human:
             desp += 1
 
         # Choosing the pills based on the points given
-        print(desp, giga, aura)
         if desp >= giga and desp >= aura:
             return "Despacitone"
         elif giga >= aura:
