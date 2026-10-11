@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Despacitone",
+        "protein": 12,
+        "vitamins": 50,
+        "minerals": 28,
+        "cost": 35
+    },
+    {
+        "name": "Gigachadus",
+        "protein": 45,
+        "vitamins": 28,
+        "minerals": 6,
+        "cost": 40
+    },
+    {
+        "name": "Aurafarmine",
+        "protein": 24,
+        "vitamins": 10,
+        "minerals": 48,
+        "cost": 30
+    }
+]
